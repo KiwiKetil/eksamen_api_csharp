@@ -1,0 +1,53 @@
+@baseUrl=https://localhost:7245
+
+### GET ALL
+
+GET {{baseUrl}}/api/v1/members?page=1&pageSize=10
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+
+### GET BY ID
+
+GET {{baseUrl}}/api/v1/members/1
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+
+### GET BY NAME
+
+GET {{baseUrl}}/api/v1/members/username?username=yngve
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+
+### REGISTER NEW
+
+POST {{baseUrl}}/api/v1/members/register
+Content-Type: application/json
+
+{
+    "UserName": "Jens123",
+    "FirstName": "Jens",
+    "LastName": "Jensen",
+    "Password": "J1nsen##",
+    "Email": "jens@gmail.com"
+}
+
+### UPDATE
+
+PUT {{baseUrl}}/api/v1/members/5
+Content-Type: application/json
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+{
+    "Id": 0,
+    "UserName": "sara",
+    "FirstName": "Sara",
+    "LastName": "Sarasen",
+    "Email": "sara@gmail.com",
+    "Created": "2023-01-01T00:00:00.000Z",
+    "Updated": "2023-01-01T00:00:00.000Z"  
+}
+
+### DELETE BY ID
+
+DELETE {{baseUrl}}/api/v1/members/5
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=

@@ -1,0 +1,55 @@
+@baseUrl=https://localhost:7245
+
+### GET ALL
+
+
+GET {{baseUrl}}/api/v1/eventregistrations?page=1&pageSize=10
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+
+### GET BY ID
+
+GET {{baseUrl}}/api/v1/eventregistrations/7
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+### GET BY EVENTID
+
+GET {{baseUrl}}/api/v1/eventregistrations/3/registrations
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+
+### REGISTER NEW
+
+POST {{baseUrl}}/api/v1/eventregistrations/1
+Content-Type: application/json
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+Content-Type: application/json
+
+{    
+    "Id": "0",
+    "EventId": "1",    
+    "MemberId": "0",
+    "Status": "Confirmed",
+    "Created": "2024-01-01T00:00:00.000Z",
+    "Updated": "2024-01-01T00:00:00.000Z"
+}
+
+### UPDATE
+
+PUT {{baseUrl}}/api/v1/eventregistrations/5
+Content-Type: application/json
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+{
+    "Id": "0",
+    "EventId": "1",    
+    "MemberId": "1",
+    "Status": "Cancelled",
+    "Created": "2024-01-01T00:00:00.000Z",
+    "Updated": "2024-01-01T00:00:00.000Z"
+}
+
+### DELETE BY ID
+
+DELETE {{baseUrl}}/api/v1/eventregistrations/5
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=

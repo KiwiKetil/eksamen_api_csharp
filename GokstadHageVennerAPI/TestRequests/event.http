@@ -1,0 +1,51 @@
+@baseUrl=https://localhost:7245
+
+### GET ALL
+
+GET {{baseUrl}}/api/v1/events?page=1&pageSize=10
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+
+### GET BY ID
+
+GET {{baseUrl}}/api/v1/events/1
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+
+### REGISTER NEW
+
+POST {{baseUrl}}/api/v1/events
+Content-Type: application/json
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+Content-Type: application/json
+
+{    
+    "EventType": "Planteskole",
+    "EventName": "Planteskole for dummies",
+    "Description": "Planteskole med fokus på tulipaner",
+    "EventDate": "2024-06-25",
+    "EventTime": "08:00:00",
+    "Created": "2024-01-01T00:00:00.000Z",
+    "Updated": "2024-01-01T00:00:00.000Z"
+}
+
+### UPDATE
+
+PUT {{baseUrl}}/api/v1/events/4
+Content-Type: application/json
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
+
+{
+    "EventType": "Planteskole",
+    "EventName": "Planteskole for dummies",
+    "Description": "Planteskole med fokus på roser",
+    "EventDate": "2024-06-25",
+    "EventTime": "08:00:00",
+    "Created": "2024-01-01T00:00:00.000Z",
+    "Updated": "2024-01-01T00:00:00.000Z"
+}
+
+### DELETE BY ID
+
+DELETE {{baseUrl}}/api/v1/events/4
+Authorization: Basic eW5ndmU6aGVtbWVsaWc=
